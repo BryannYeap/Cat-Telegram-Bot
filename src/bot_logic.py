@@ -221,10 +221,10 @@ async def see_settings(update, context):
 
         These are your preferred settings!
 
-        Breed: {user_entity.breed}
+Breed: {cat_api.get_cat_breed_from_breed_id(user_entity.breed)}
 
-        Number of images / gifs at a time: {user_entity.no_of_photos}
+Number of images / gifs at a time: {user_entity.no_of_photos}
 
-        GIFs or Images: {'GIFs' if user_entity.is_gif else 'Images'} 
+GIFs or Images: {'GIFs' if user_entity.is_gif else 'Images'} 
 
     ''')

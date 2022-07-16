@@ -20,3 +20,9 @@ def get_cat_breed_id_from_name(name):
     cat_breed_name_list = list(map(lambda cat_breed_object : cat_breed_object['name'], cat_breeds_json))
     cat_index = list_util.binary_search(name, cat_breed_name_list)
     return cat_breeds_json[cat_index]['id']
+
+def get_cat_breed_from_breed_id(breed_id):
+    cat_breeds_json = get_cat_breeds()
+    cat_breed_id_list = list(map(lambda cat_breed_object : cat_breed_object['id'], cat_breeds_json))
+    cat_index = list_util.binary_search(breed_id, cat_breed_id_list)
+    return cat_breeds_json[cat_index]['name']

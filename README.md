@@ -2,6 +2,12 @@
 
 Sends pictures of cats
 
+Try the bot out [here](https://t.me/cat_picture_bot)
+
+**:exclamation: Note: Bot might take 20-30s to start up due to inactivity as it is being hosted on Heroku for free**
+
+**:exclamation: Note: You will not be able to run the bot by simply pulling the source code. This GitHub Repo is just to allow users to try the bot by using the link above, as well as for reference to the source code**
+
 ## Description
 
 Inspired by and adapted from a tutorial originally, but with modifications in structure and behavior. The end product code differs almost completely from the original tutorial's source code.
@@ -17,12 +23,6 @@ Listed are some of the enhancements that I worked on myself, without help from t
 1. Implemented persistence with a Database Management System (MongoDB) instead of a JSON file saved locally
 1. Added more commands
 1. Deploying the bot
-
-Try the bot out [here](https://t.me/cat_picture_bot)
-
-**:exclamation: Note: Bot might take 20-30s to start up due to inactivity as it is being hosted on Heroku for free**
-
-**:exclamation: Note: You will not be able to run the bot by simply pulling the source code. This GitHub Repo is just to allow users to try the bot by using the link above, as well as for reference to the source code**
 
 ## Commands
 

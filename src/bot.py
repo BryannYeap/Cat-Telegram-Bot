@@ -37,6 +37,8 @@ settings_handler = ConversationHandler(
 )
 bot.add_handler(settings_handler)
 
+bot.add_handler(CommandHandler("see_settings", bot_logic.see_settings))
+
 # Start the bot
 bot.run_webhook(listen = '0.0.0.0', port = WEBHOOK_PORT, url_path = BOT_TOKEN, webhook_url = WEBHOOK_URL + BOT_TOKEN)
 

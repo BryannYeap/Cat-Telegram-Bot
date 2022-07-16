@@ -27,8 +27,11 @@ Here are some of the commands you can use!
 
 /stop  -  If you were in the middle of setting your preferences using /settings, you could use this command to stop. However, any preferences indicated before you called this command would have been automatically saved.
 
+/see_settings -  Bot shows your preferred settings
+
 If you want to find out more about this bot, head to https://github.com/BryannYeap/Cat-Telegram-Bot
 Contact me at @BryannYeapKokKeong
+
     ''')
 
 # /hello 
@@ -193,6 +196,8 @@ async def finish_settings(update):
         reply_markup = ReplyKeyboardRemove()
     )
 
+# /stop
+
 async def stop(update, context):
     await update.message.reply_text(
         "Ok, we'll stop saving your settings! Note that any settings you have made up to this point would have been saved.",
@@ -200,3 +205,26 @@ async def stop(update, context):
     )
 
     return ConversationHandler.END
+
+# /see_settings
+
+async def see_settings(update, context):
+    user = update.message.from_user
+
+    if not user_repository.user_exists(user.id):
+        user_entity = User_Entity(user.id, user.username, user.first_name, 'all', '1', False)
+        user_repository.add_user(user_entity)
+    
+    user_entity = user_repository.get_user(user.id)
+    
+    await update.message.reply_text(f'''
+
+        These are your preferred settings!
+
+        Breed: {user_entity.breed}
+
+        Number of images / gifs at a time: {user_entity.no_of_photos}
+
+        GIFs or Images: {'GIFs' if user_entity.is_gif else 'Images'} 
+
+    ''')

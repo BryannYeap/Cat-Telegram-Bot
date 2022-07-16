@@ -15,6 +15,7 @@ Listed are some of the enhancements that I worked on myself, without help from t
 1. Implemented a Data Access Object (DAO) pattern
 1. Implemented and incorporated logging
 1. Implemented persistence with a Database Management System (MongoDB) instead of a JSON file saved locally
+1. Added more commands
 1. Deploying the bot
 
 Try the bot out [here](https://t.me/cat_picture_bot)
@@ -36,6 +37,8 @@ Try the bot out [here](https://t.me/cat_picture_bot)
 `/settings`: Allows user to specify breed of cat, number of photos at a time, and whether he / she wants GIFs or still images. (Only applies to the `/cat` command!)
 
 `/stop`: If you were in the middle of setting your preferences using `/settings`, you could use this command to stop. However, any preferences indicated before you called this command would have been automatically saved.
+
+`/see_settings`: Bot shows your preferred settings
 
 ## Things I Learnt / Improved in
 

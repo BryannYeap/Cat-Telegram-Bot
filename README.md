@@ -17,7 +17,7 @@ Listed are some of the enhancements that I worked on myself, without help from t
 1. Implemented persistence with a Database Management System (MongoDB) instead of a JSON file saved locally
 1. Deploying the bot
 
-Try the bot out [here](https://t.me/cat_picture_bot)
+Try the bot out [here](https://t.me/cat_picture_bot) (**BOT MIGHT TAKE 20-30s TO SPIN UP DUE TO INACTIVITY AS IT IS BEING HOSTED ON HEROKU FOR FREE**)
 
 **Note: You will not be able to run the bot by simply pulling the source code. This GitHub Repo is just to allow users to try the bot by using the link above, as well as for reference to the source code**
 

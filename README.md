@@ -19,9 +19,9 @@ Listed are some of the enhancements that I worked on myself, without help from t
 
 Try the bot out [here](https://t.me/cat_picture_bot)
 
-**Note: Bot might take 20-30s to start up due to inactivity as it is being hosted on Heroku for free**
+**:exclamation: Note: Bot might take 20-30s to start up due to inactivity as it is being hosted on Heroku for free**
 
-**Note: You will not be able to run the bot by simply pulling the source code. This GitHub Repo is just to allow users to try the bot by using the link above, as well as for reference to the source code**
+**:exclamation: Note: You will not be able to run the bot by simply pulling the source code. This GitHub Repo is just to allow users to try the bot by using the link above, as well as for reference to the source code**
 
 ## Commands
 

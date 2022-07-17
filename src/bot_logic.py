@@ -136,7 +136,7 @@ async def save_breed(update, context):
     user = update.message.from_user
 
     breed = update.message.text
-    breed_id = 'all' if breed == "All of them!" else cat_api.get_cat_breed_id_from_name(breed)
+    breed_id = cat_api.get_cat_breed_id_from_name(breed)
 
     user_entity = user_repository.get_user(user.id)
     user_entity.breed = breed_id
@@ -216,7 +216,7 @@ async def see_settings(update, context):
         user_repository.add_user(user_entity)
     
     user_entity = user_repository.get_user(user.id)
-    
+
     await update.message.reply_text(f'''
 
         These are your preferred settings!

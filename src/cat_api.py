@@ -28,7 +28,5 @@ def get_cat_breed_from_breed_id(breed_id):
     if (breed_id == 'all'):
         return 'All of them!'
 
-    cat_breeds_json = get_cat_breeds()
-    cat_breed_id_list = list(map(lambda cat_breed_object : cat_breed_object['id'], cat_breeds_json))
-    cat_index = list_util.binary_search(breed_id, cat_breed_id_list)
-    return cat_breeds_json[cat_index]['name']
+    cat = get_cats(breed_id, '1', False)
+    return cat['breeds']['name']

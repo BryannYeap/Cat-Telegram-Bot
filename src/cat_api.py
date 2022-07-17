@@ -29,4 +29,4 @@ def get_cat_breed_from_breed_id(breed_id):
         return 'All of them!'
 
     cat = get_cats(breed_id, '1', False)
-    return cat['breeds']['name']
+    return cat[0]['breeds']['name']

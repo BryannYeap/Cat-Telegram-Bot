@@ -45,7 +45,11 @@ async def hello(update, context):
 async def get_cat(update, context):
     user = update.message.from_user
     
-    try: 
+    if not user_repository.user_exists(user.id):
+        cats = cat_api.get_cats('all', '1', False)
+        url = cats[0]['url']
+        await context.bot.send_photo(chat_id = update.effective_chat.id, photo = url)
+    else: 
         user_entity = user_repository.get_user(user.id)
         cats = cat_api.get_cats(user_entity.breed, user_entity.no_of_photos, user_entity.is_gif)
 
@@ -62,10 +66,6 @@ async def get_cat(update, context):
 
         if len(cats) < int(user_entity.no_of_photos):
             await update.message.reply_text("Sorry, that's all the cats we could find!")
-    except KeyError:
-        cats = cat_api.get_cats('all', '1', False)
-        url = cats[0]['url']
-        await context.bot.send_photo(chat_id = update.effective_chat.id, photo = url)
 
 # /breed
 
